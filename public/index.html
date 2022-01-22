@@ -6,6 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="output.css">
+  <script src="../public/main.js"></script>
   
   <title>Frontend Mentor | E-commerce product page</title>
 
@@ -17,13 +18,13 @@
         <img src="/images/icon-menu.svg" alt="menu" class="mb-2 inline-block lg:hidden md:hidden cursor-pointer">
         <h1 class="text-2xl font-bold inline-block hover:underline hover:text-[#ff7d1a] cursor-pointer">sneakers</h1>
 
-        <nav class="sm:bg-blue-500 md:inline-block md:bg-green-500 lg:bg-yellow-200">
+        <nav class="md:inline-block">
           <ul class="md:flex md:ml-10 lg:flex lg:ml-10 lg:text-sm">
-            <li class="text-[#a8a5a3] hover:underline hover:text-[#ff7d1a]"><a href="#">Collections</a></li>
-            <li class="lg:ml-8 text-[#a8a5a3] hover:underline hover:text-[#ff7d1a]"><a href="#">Men</a></li>
-            <li class="lg:ml-8 text-[#a8a5a3] hover:underline hover:text-[#ff7d1a]"><a href="#">Women</a></li>
-            <li class="lg:ml-8 text-[#a8a5a3] hover:underline hover:text-[#ff7d1a]"><a href="#">About</a></li>
-            <li class="lg:ml-8 text-[#a8a5a3] hover:underline hover:text-[#ff7d1a]"><a href="#">Contact</a></li>
+            <li class="text-[#a8a5a3] hover:underline underline-offset-[28px] decoration-4 hover:text-[#ff7d1a]"><a href="#">Collections</a></li>
+            <li class="lg:ml-8 text-[#a8a5a3] hover:underline underline-offset-[26px] decoration-4 hover:text-[#ff7d1a]"><a href="#">Men</a></li>
+            <li class="lg:ml-8 text-[#a8a5a3] hover:underline underline-offset-[26px] decoration-4 hover:text-[#ff7d1a]"><a href="#">Women</a></li>
+            <li class="lg:ml-8 text-[#a8a5a3] hover:underline underline-offset-[26px] decoration-4 hover:text-[#ff7d1a]"><a href="#">About</a></li>
+            <li class="lg:ml-8 text-[#a8a5a3] hover:underline underline-offset-[26px] decoration-4 hover:text-[#ff7d1a]"><a href="#">Contact</a></li>
           </ul>
         </nav>
 
@@ -41,14 +42,14 @@
   
   <main class="lg:mt-16 lg:ml-48 lg:flex">
     <section class="lg:ml-8 flex flex-col">
-      <div class="">
-        <img class ="lg:h-96 lg:rounded-lg" src="/images/image-product-1.jpg" alt="">
+      <div>
+        <img id="image" class ="lg:h-96 lg:rounded-lg" src="/images/image-product-1.jpg" alt="">
       </div>
       <div class="hidden mt-6 lg:flex lg:flex-row">
-        <img class="h-20 mr-5 rounded-lg" src="../images/image-product-1-thumbnail.jpg" alt="product-1">
-        <img class="h-20 mr-5 rounded-lg" src="../images/image-product-2-thumbnail.jpg" alt="product-1">
-        <img class="h-20 mr-5 rounded-lg" src="../images/image-product-3-thumbnail.jpg" alt="product-1">
-        <img class="h-20 mr-5 rounded-lg" src="../images/image-product-4-thumbnail.jpg" alt="product-1">
+        <img class="preview h-20 mr-5 rounded-lg cursor-pointer" src="/images/image-product-1.jpg" alt="product-1" onmouseover = "zoom(this)" onmouseout = "unDo()">
+        <img class="preview h-20 mr-5 rounded-lg cursor-pointer" src="/images/image-product-2.jpg" alt="product-2" onmouseover = "zoom(this)" onmouseout = "unDo()">
+        <img class="preview h-20 mr-5 rounded-lg cursor-pointer" src="/images/image-product-3.jpg" alt="product-3" onmouseover = "zoom(this)" onmouseout = "unDo()">
+        <img class="preview h-20 mr-5 rounded-lg cursor-pointer" src="/images/image-product-4.jpg" alt="product-4" onmouseover = "zoom(this)" onmouseout = "unDo()">
       </div>
     </section>
       
@@ -111,13 +112,13 @@
           <div class="lg:flex lg:mt-6">
             <div class="bg-[#f7f8fd] rounded-lg xs:mt-6 lg:mt-0 py-1 p-4 lg:px-0 flex xs:justify-between lg:justify-around lg:w-32 lg:mr-8">
               <div class="text-[#ff7d1a] text-2xl font-medium">
-                <button>-</button>
+                <button onclick="reverseCounter()">-</button>
               </div>
               <div class="text-2xl font-medium">
-                <span class="">0</span>
+                <span id="counter">0</span>
               </div>
               <div class="text-[#ff7d1a] text-2xl font-medium ">
-                <button>+</button>
+                <button onclick="forwardCounter()">+</button>
               </div>
             </div>            
 
